@@ -73,6 +73,7 @@ import {FormBuilder, FormGroup, Validators} from '@angular/forms';
     <button class="btn btn-default" (click)="submitted=false">Edit</button>
   </div>
 </div>
+<div></div>
 
   `
 })
