@@ -1,0 +1,22 @@
+
+<select [(ngModel)]="selectedCharacter">
+    <option *ngFor="let ch of characters" [ngValue]="ch">{{ ch.name }}</option>
+</select>
+
+
+<ul>
+  <li *ngFor="let character of characters" (click)="select(character)"
+  [class.selected]="selectedCharacter === character" >
+    {{ character.name }}
+  </li>
+</ul>
+
+
+
+<app-character *ngIf="selectedCharacter.name.length > 0" [character] = "selectedCharacter"> Input..</app-character>
+
+<select>
+    <option *ngFor="let num of numForms">{{ num }}</option>
+</select>
+
+{{ selectedCharacter.name }}

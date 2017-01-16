@@ -1,0 +1,14 @@
+<h1> {{title}} </h1>
+<div [style.color]="myColor">
+<p>Hello {{name}}</p>
+</div>
+<input type="text" [value]="name" (blur)="name = $event.target.value" >
+<input type="text" [(ngModel)]="name"  >
+<button (click)="changeColor()">Change</button>
+
+<ul>
+    <li *ngFor="let customer of customers">
+        <app-customer [customer]="customer"></app-customer>
+    </li>
+    
+</ul>
